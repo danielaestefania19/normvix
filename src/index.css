@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-azul: #142b44;
+  --color-turquesa: #18a6a0;
+  --color-marfil: #f7f8fa;
+  --color-grafito: #29333d;
+  --color-ambar: #f2b84b;
+
+  --font-heading: "Poppins", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-grafito);
+  background: var(--color-marfil);
+}
