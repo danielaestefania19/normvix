@@ -1,45 +1,62 @@
+import { useEffect, useState } from 'react'
 import { CheckCircle2, Clock, AlertTriangle } from 'lucide-react'
 
 export default function Hero() {
+  const [ringFilled, setRingFilled] = useState(false)
+
+  useEffect(() => {
+    const t = setTimeout(() => setRingFilled(true), 500)
+    return () => clearTimeout(t)
+  }, [])
+
   return (
     <section id="top" className="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-          <span className="inline-flex items-center rounded-full bg-turquesa/10 text-turquesa text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
+          <span className="animate-fade-up inline-flex items-center rounded-full bg-turquesa/10 text-turquesa text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
             Gestión de cumplimiento para empresas venezolanas
           </span>
 
-          <h1 className="mt-6 font-heading font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-azul">
+          <h1
+            className="animate-fade-up mt-6 font-heading font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-azul"
+            style={{ animationDelay: '100ms' }}
+          >
             Tus obligaciones,
             <br />
             bajo control.
           </h1>
 
-          <p className="mt-6 text-lg text-grafito/70 max-w-lg">
+          <p
+            className="animate-fade-up mt-6 text-lg text-grafito/70 max-w-lg"
+            style={{ animationDelay: '200ms' }}
+          >
             Nexo centraliza, organiza y te alerta sobre cada obligación legal, fiscal y
             operativa de tu empresa, para que ningún plazo se te escape. Reemplaza las hojas
             de cálculo y los recordatorios sueltos por un solo lugar donde tu equipo puede ver,
             asignar y demostrar el cumplimiento de principio a fin.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div
+            className="animate-fade-up mt-10 flex flex-wrap gap-4"
+            style={{ animationDelay: '300ms' }}
+          >
             <a
               href="#contacto"
-              className="inline-flex items-center rounded-full bg-azul text-white text-sm font-semibold px-7 py-3.5 hover:bg-turquesa transition-colors"
+              className="inline-flex items-center rounded-full bg-azul text-white text-sm font-semibold px-7 py-3.5 transition-all hover:bg-turquesa hover:scale-[1.03]"
             >
               Solicitar demo gratuita
             </a>
             <a
               href="#plataforma"
-              className="inline-flex items-center rounded-full border border-azul/20 text-azul text-sm font-semibold px-7 py-3.5 hover:border-turquesa hover:text-turquesa transition-colors"
+              className="inline-flex items-center rounded-full border border-azul/20 text-azul text-sm font-semibold px-7 py-3.5 transition-all hover:border-turquesa hover:text-turquesa hover:scale-[1.03]"
             >
               Ver cómo funciona
             </a>
           </div>
         </div>
 
-        <div className="relative">
-          <div className="absolute -inset-6 bg-turquesa/10 rounded-[2rem] blur-2xl" aria-hidden="true" />
+        <div className="animate-fade-up relative" style={{ animationDelay: '350ms' }}>
+          <div className="absolute -inset-6 bg-turquesa/10 rounded-4xl blur-2xl" aria-hidden="true" />
           <div className="relative rounded-3xl bg-white shadow-xl shadow-azul/10 border border-black/5 p-6 md:p-8">
             <div className="flex items-center justify-between">
               <p className="font-heading font-semibold text-azul">Resumen de Cumplimiento</p>
@@ -58,7 +75,8 @@ export default function Hero() {
                     stroke="#18A6A0"
                     strokeWidth="12"
                     strokeLinecap="round"
-                    strokeDasharray={`${2 * Math.PI * 42 * 0.92} ${2 * Math.PI * 42}`}
+                    className="transition-[stroke-dasharray] duration-1000 ease-out"
+                    strokeDasharray={`${2 * Math.PI * 42 * (ringFilled ? 0.92 : 0)} ${2 * Math.PI * 42}`}
                   />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center font-heading font-semibold text-2xl text-azul">

@@ -1,4 +1,5 @@
 import { FolderX, CalendarClock, GitBranch, EyeOff } from 'lucide-react'
+import Reveal from './Reveal'
 
 const problems = [
   {
@@ -27,7 +28,7 @@ export default function Problems() {
   return (
     <section id="problematica" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
             La gestión de obligaciones, hoy
           </span>
@@ -39,22 +40,21 @@ export default function Problems() {
             equipos más disciplinados terminan reaccionando a última hora en lugar de
             anticiparse.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid md:grid-cols-2 gap-6">
-          {problems.map(({ icon: Icon, title, text }) => (
-            <div
-              key={title}
-              className="flex gap-5 rounded-2xl bg-white border border-black/5 p-6"
-            >
-              <div className="w-11 h-11 shrink-0 rounded-xl bg-red-50 flex items-center justify-center">
-                <Icon size={22} className="text-red-400" />
+          {problems.map(({ icon: Icon, title, text }, i) => (
+            <Reveal key={title} delay={i * 100}>
+              <div className="flex gap-5 rounded-2xl bg-white border border-black/5 p-6">
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-red-50 flex items-center justify-center">
+                  <Icon size={22} className="text-red-400" />
+                </div>
+                <div>
+                  <h3 className="font-heading font-semibold text-azul">{title}</h3>
+                  <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-heading font-semibold text-azul">{title}</h3>
-                <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>
-              </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

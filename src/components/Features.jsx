@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const pillars = [
   {
     n: '01',
@@ -25,7 +27,7 @@ export default function Features() {
   return (
     <section id="plataforma" className="py-20 md:py-28 bg-azul text-white">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
             La plataforma
           </span>
@@ -36,15 +38,17 @@ export default function Features() {
             Nexo se construye sobre cuatro pilares que convierten el cumplimiento en un
             proceso gestionado por resultados, no en una carrera contra el calendario.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid sm:grid-cols-2 gap-x-10 gap-y-12">
-          {pillars.map(({ n, title, text }) => (
-            <div key={n} className="border-t border-white/10 pt-6">
-              <span className="font-heading font-semibold text-turquesa text-sm">{n}</span>
-              <h3 className="mt-3 font-heading font-semibold text-xl">{title}</h3>
-              <p className="mt-2 text-white/60 leading-relaxed max-w-md">{text}</p>
-            </div>
+          {pillars.map(({ n, title, text }, i) => (
+            <Reveal key={n} delay={i * 100}>
+              <div className="border-t border-white/10 pt-6">
+                <span className="font-heading font-semibold text-turquesa text-sm">{n}</span>
+                <h3 className="mt-3 font-heading font-semibold text-xl">{title}</h3>
+                <p className="mt-2 text-white/60 leading-relaxed max-w-md">{text}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

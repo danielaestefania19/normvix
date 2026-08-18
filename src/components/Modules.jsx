@@ -1,4 +1,5 @@
 import { LayoutDashboard, CalendarCheck, FolderLock, BellRing, FileBarChart, Building } from 'lucide-react'
+import Reveal from './Reveal'
 
 const modules = [
   {
@@ -37,7 +38,7 @@ export default function Modules() {
   return (
     <section id="modulos" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
             Módulos
           </span>
@@ -49,20 +50,19 @@ export default function Modules() {
             información fluye del calendario a las alertas, de las alertas a los reportes,
             sin doble digitación.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {modules.map(({ icon: Icon, title, text }) => (
-            <div
-              key={title}
-              className="rounded-2xl border border-black/5 p-6 hover:border-turquesa/40 hover:shadow-lg hover:shadow-azul/5 transition-all"
-            >
-              <div className="w-11 h-11 rounded-xl bg-turquesa/10 flex items-center justify-center">
-                <Icon size={22} className="text-turquesa" />
+          {modules.map(({ icon: Icon, title, text }, i) => (
+            <Reveal key={title} delay={i * 80}>
+              <div className="group h-full rounded-2xl border border-black/5 p-6 hover:border-turquesa/40 hover:shadow-lg hover:shadow-azul/5 transition-all">
+                <div className="w-11 h-11 rounded-xl bg-turquesa/10 flex items-center justify-center transition-transform group-hover:scale-110">
+                  <Icon size={22} className="text-turquesa" />
+                </div>
+                <h3 className="mt-5 font-heading font-semibold text-azul">{title}</h3>
+                <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>
               </div>
-              <h3 className="mt-5 font-heading font-semibold text-azul">{title}</h3>
-              <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

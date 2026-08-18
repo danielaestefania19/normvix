@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const stats = [
   { value: '92%', label: 'Cumplimiento promedio de los equipos que usan Nexo' },
   { value: '-70%', label: 'Tiempo dedicado a seguimiento manual de obligaciones' },
@@ -9,7 +11,7 @@ export default function Results() {
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
             Resultados
           </span>
@@ -20,14 +22,14 @@ export default function Results() {
             Estos son los resultados que reportan los equipos que dejaron de gestionar sus
             obligaciones a mano y adoptaron un sistema centralizado.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center lg:text-left">
-          {stats.map(({ value, label }) => (
-            <div key={label}>
+          {stats.map(({ value, label }, i) => (
+            <Reveal key={label} delay={i * 100}>
               <p className="font-heading font-semibold text-4xl md:text-5xl text-azul">{value}</p>
               <p className="mt-3 text-sm text-grafito/60 leading-relaxed">{label}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
