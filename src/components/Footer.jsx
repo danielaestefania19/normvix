@@ -12,25 +12,39 @@ const links = [
 ]
 
 const contactInfo = [
-  { icon: iconContact, title: 'Llámanos', text: '+58 412 123 4567' },
+  { icon: iconContact, title: 'Llámanos', text: '+58 412-9564458' },
   { icon: iconLocation, title: 'Ubicación', text: 'Caracas, Venezuela' },
-  { icon: iconNetwork, title: 'Síguenos', text: 'Conecta en redes' },
-  { icon: iconFaq, title: '¿Tienes dudas?', text: 'Preguntas frecuentes' },
+  {
+    icon: iconNetwork,
+    title: 'Síguenos',
+    text: 'Conecta en redes',
+    href: 'https://www.instagram.com/nexo__vzla/',
+  },
+  { icon: iconFaq, title: '¿Tienes dudas?', text: 'Preguntas frecuentes', href: '#faq' },
 ]
 
 export default function Footer() {
   return (
     <footer className="bg-azul text-white/60">
       <div className="mx-auto max-w-7xl px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {contactInfo.map(({ icon, title, text }) => (
-          <div key={title} className="flex items-center gap-4">
-            <img src={icon} alt="" className="w-12 h-12 rounded-full shrink-0" />
-            <div>
-              <p className="text-sm font-semibold text-white">{title}</p>
-              <p className="text-sm">{text}</p>
-            </div>
-          </div>
-        ))}
+        {contactInfo.map(({ icon, title, text, href }) => {
+          const Tag = href ? 'a' : 'div'
+          const isExternal = href?.startsWith('http')
+          return (
+            <Tag
+              key={title}
+              {...(href ? { href } : {})}
+              {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className={`flex items-center gap-4${href ? ' hover:text-white transition-colors' : ''}`}
+            >
+              <img src={icon} alt="" className="w-12 h-12 rounded-full shrink-0" />
+              <div>
+                <p className="text-sm font-semibold text-white">{title}</p>
+                <p className="text-sm">{text}</p>
+              </div>
+            </Tag>
+          )
+        })}
       </div>
 
       <div className="border-t border-white/10">
@@ -48,7 +62,7 @@ export default function Footer() {
             ))}
           </nav>
 
-          <p className="text-sm">hola@nexo.com.ve</p>
+          <p className="text-sm">sales@nexovzla.com</p>
         </div>
       </div>
 

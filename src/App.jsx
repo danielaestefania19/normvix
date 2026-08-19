@@ -5,6 +5,7 @@ import Problems from './components/Problems'
 import Features from './components/Features'
 import Modules from './components/Modules'
 import Results from './components/Results'
+import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 
@@ -18,6 +19,7 @@ function App() {
       <Features />
       <Modules />
       <Results />
+      <FAQ />
       <CTA />
       <Footer />
     </div>

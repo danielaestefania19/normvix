@@ -9,7 +9,7 @@ const stats = [
 
 export default function Results() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 border-t border-black/5">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">

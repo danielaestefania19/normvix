@@ -29,7 +29,7 @@ export default function CTA() {
   }
 
   return (
-    <section id="contacto" className="py-20 md:py-28 bg-white">
+    <section id="contacto" className="py-20 md:py-28 bg-marfil border-t border-black/5">
       <Reveal className="mx-auto max-w-4xl px-6 text-center">
         <h2 className="font-heading font-semibold text-3xl md:text-4xl text-azul">
           ¿Listo para tomar el control de tus obligaciones?
@@ -52,7 +52,7 @@ export default function CTA() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="tu@empresa.com"
-              className="flex-1 rounded-full border border-black/10 px-5 py-3 text-sm outline-none focus:border-turquesa transition-colors"
+              className="flex-1 rounded-full border border-black/10 bg-white px-5 py-3 text-sm outline-none focus:border-turquesa transition-colors"
             />
             <button
               type="submit"
