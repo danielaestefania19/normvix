@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
-import { CheckCircle2, Clock, AlertTriangle } from 'lucide-react'
+import { CheckCircle2, Clock, AlertTriangle, PlayCircle } from 'lucide-react'
+import VideoModal from './VideoModal'
 
 export default function Hero() {
   const [ringFilled, setRingFilled] = useState(false)
+  const [videoOpen, setVideoOpen] = useState(false)
 
   useEffect(() => {
     const t = setTimeout(() => setRingFilled(true), 500)
@@ -46,12 +48,14 @@ export default function Hero() {
             >
               Solicitar demo gratuita
             </a>
-            <a
-              href="#plataforma"
-              className="inline-flex items-center rounded-full border border-azul/20 text-azul text-sm font-semibold px-7 py-3.5 transition-all hover:border-turquesa hover:text-turquesa hover:scale-[1.03]"
+            <button
+              type="button"
+              onClick={() => setVideoOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full border border-azul/20 text-azul text-sm font-semibold px-7 py-3.5 transition-all hover:border-turquesa hover:text-turquesa hover:scale-[1.03]"
             >
+              <PlayCircle size={18} />
               Ver cómo funciona
-            </a>
+            </button>
           </div>
         </div>
 
@@ -108,6 +112,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <VideoModal open={videoOpen} onClose={() => setVideoOpen(false)} />
     </section>
   )
 }
