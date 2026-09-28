@@ -34,7 +34,7 @@ export default function Audience() {
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">
             Sin importar el tamaño de tu empresa, cumplir a tiempo depende de tener la
-            información correcta al alcance de la mano. Nexo se adapta al perfil de cada
+            información correcta al alcance de la mano. Normvix se adapta al perfil de cada
             equipo para que nadie dependa de la memoria de una sola persona.
           </p>
         </Reveal>

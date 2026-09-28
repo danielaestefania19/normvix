@@ -1,4 +1,4 @@
-import Logo from './Logo'
+import logoHorizontal from '../assets/logo-horizontal.png'
 import iconContact from '../assets/icon-contact.png'
 import iconLocation from '../assets/icon-location.png'
 import iconNetwork from '../assets/icon-network.png'
@@ -18,7 +18,7 @@ const contactInfo = [
     icon: iconNetwork,
     title: 'Síguenos',
     text: 'Conecta en redes',
-    href: 'https://www.instagram.com/nexo__vzla/',
+    href: 'https://www.instagram.com/Normvix__vzla/',
   },
   { icon: iconFaq, title: '¿Tienes dudas?', text: 'Preguntas frecuentes', href: '#faq' },
 ]
@@ -50,7 +50,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-14 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <div>
-            <Logo dark />
+            <img src={logoHorizontal} alt="Normvix" className="h-18 w-auto" />
             <p className="mt-3 text-sm max-w-xs">Tus obligaciones, bajo control.</p>
           </div>
 
@@ -62,13 +62,13 @@ export default function Footer() {
             ))}
           </nav>
 
-          <p className="text-sm">sales@nexovzla.com</p>
+          <p className="text-sm">contact@normvix.com</p>
         </div>
       </div>
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-6 text-xs">
-          © {new Date().getFullYear()} Nexo. Todos los derechos reservados.
+          © {new Date().getFullYear()} Normvix. Todos los derechos reservados.
         </div>
       </div>
     </footer>

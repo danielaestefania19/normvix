@@ -4,15 +4,15 @@ import Reveal from './Reveal'
 
 const faqs = [
   {
-    q: '¿Qué tipo de obligaciones puedo gestionar con Nexo?',
+    q: '¿Qué tipo de obligaciones puedo gestionar con Normvix?',
     a: 'Obligaciones legales, fiscales, laborales y municipales: declaraciones, permisos, renovaciones, pólizas y cualquier compromiso con fecha de vencimiento que tu empresa deba cumplir.',
   },
   {
-    q: '¿Nexo reemplaza a mi contador o abogado?',
-    a: 'No. Nexo organiza y centraliza la información para que tu equipo, tus asesores legales y contables trabajen sobre los mismos datos, con recordatorios y evidencia siempre a la mano.',
+    q: 'Normvix reemplaza a mi contador o abogado?',
+    a: 'No. Normvix organiza y centraliza la información para que tu equipo, tus asesores legales y contables trabajen sobre los mismos datos, con recordatorios y evidencia siempre a la mano.',
   },
   {
-    q: '¿Cuánto tiempo toma implementar Nexo en mi empresa?',
+    q: '¿Cuánto tiempo toma implementar Normvix en mi empresa?',
     a: 'La mayoría de los equipos carga su primer calendario de obligaciones y empieza a recibir alertas en menos de una semana, sin necesidad de instalar nada.',
   },
   {
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: '¿Qué pasa si necesito ayuda?',
-    a: 'Nuestro equipo responde por correo a sales@nexovzla.com y por los canales de contacto del pie de página, normalmente en menos de 24 horas.',
+    a: 'Nuestro equipo responde por correo a contact@normvix.com y por los canales de contacto del pie de página, normalmente en menos de 24 horas.',
   },
 ]
 

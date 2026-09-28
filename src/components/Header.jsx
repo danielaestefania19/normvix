@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import Logo from './Logo'
+import logoHorizontal from '../assets/logo-horizontal.png'
 
 const links = [
   { href: '#problematica', label: 'Problemática' },
@@ -16,7 +16,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-marfil/90 backdrop-blur border-b border-black/5">
       <div className="mx-auto max-w-7xl px-6 h-18 py-3 flex items-center justify-between">
         <a href="#top">
-          <Logo />
+          <img src={logoHorizontal} alt="Normvix" className="h-25 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

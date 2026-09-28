@@ -35,7 +35,7 @@ export default function CTA() {
           ¿Listo para tomar el control de tus obligaciones?
         </h2>
         <p className="mt-4 text-grafito/65 max-w-xl mx-auto">
-          Agenda una demo gratuita y descubre cómo Nexo ayuda a tu empresa a mantenerse al día,
+          Agenda una demo gratuita y descubre cómo Normvix ayuda a tu empresa a mantenerse al día,
           prevenir riesgos y ganar tranquilidad. Sin instalaciones ni permanencia mínima: solo
           déjanos tu correo y nuestro equipo te contacta en menos de 24 horas.
         </p>
@@ -66,7 +66,7 @@ export default function CTA() {
 
         {status === 'error' && (
           <p className="mt-4 text-sm text-red-500">
-            No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos a sales@nexovzla.com.
+            No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos a contact@normvix.com.
           </p>
         )}
       </Reveal>

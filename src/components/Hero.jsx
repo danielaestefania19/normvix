@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <span className="animate-fade-up inline-flex items-center rounded-full bg-turquesa/10 text-turquesa text-xs font-semibold tracking-wide uppercase px-4 py-1.5">
-            Gestión de cumplimiento para empresas venezolanas
+            Gestión de cumplimiento para empresas
           </span>
 
           <h1
@@ -32,7 +32,7 @@ export default function Hero() {
             className="animate-fade-up mt-6 text-lg text-grafito/70 max-w-lg"
             style={{ animationDelay: '200ms' }}
           >
-            Nexo centraliza, organiza y te alerta sobre cada obligación legal, fiscal y
+            Normvix centraliza, organiza y te alerta sobre cada obligación legal, fiscal y
             operativa de tu empresa, para que ningún plazo se te escape. Reemplaza las hojas
             de cálculo y los recordatorios sueltos por un solo lugar donde tu equipo puede ver,
             asignar y demostrar el cumplimiento de principio a fin.

@@ -35,7 +35,7 @@ export default function Features() {
             Todo lo que necesitas para operar con tranquilidad
           </h2>
           <p className="mt-4 text-white/60 leading-relaxed">
-            Nexo se construye sobre cuatro pilares que convierten el cumplimiento en un
+            Normvix se construye sobre cuatro pilares que convierten el cumplimiento en un
             proceso gestionado por resultados, no en una carrera contra el calendario.
           </p>
         </Reveal>

@@ -1,7 +1,7 @@
 import Reveal from './Reveal'
 
 const stats = [
-  { value: '92%', label: 'Cumplimiento promedio de los equipos que usan Nexo' },
+  { value: '92%', label: 'Cumplimiento promedio de los equipos que usan Normvix' },
   { value: '-70%', label: 'Tiempo dedicado a seguimiento manual de obligaciones' },
   { value: '0', label: 'Multas por vencimientos olvidados' },
   { value: '24/7', label: 'Visibilidad en tiempo real del estado de cumplimiento' },

@@ -1,4 +1,4 @@
-function NexoMark({ size = 32 }) {
+function NormvixMark({ size = 32 }) {
   return (
     <svg
       width={size}
@@ -21,12 +21,12 @@ function NexoMark({ size = 32 }) {
 export default function Logo({ size = 32, dark = false, className = '' }) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <NexoMark size={size} />
+      <NormvixMark size={size} />
       <span
         className={`font-heading font-semibold tracking-tight ${dark ? 'text-white' : 'text-azul'}`}
         style={{ fontSize: size * 0.75 }}
       >
-        NEXO
+        NORMVIX
       </span>
     </div>
   )
