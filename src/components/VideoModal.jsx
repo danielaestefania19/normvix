@@ -33,10 +33,11 @@ export default function VideoModal({ open, onClose }) {
         >
           <X size={20} />
         </button>
-        <video
-          src="/demo.mp4"
-          controls
-          autoPlay
+        <iframe
+          src="https://www.youtube.com/embed/RkLnJzON3l8?autoplay=1&rel=0"
+          title="Video demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
           className="w-full aspect-video"
         />
       </div>
