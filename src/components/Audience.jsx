@@ -1,45 +1,42 @@
-import { Building2, Scale, Calculator, Network } from 'lucide-react'
+import { Crown, UserCog, MapPin } from 'lucide-react'
 import Reveal from './Reveal'
 
 const segments = [
   {
-    icon: Building2,
-    title: 'Empresas en crecimiento',
-    text: 'Cada nueva sucursal, permiso o línea de negocio suma obligaciones. Escala tus operaciones sin perder el control de lo que la ley exige en cada etapa.',
+    icon: Crown,
+    title: 'Dirección y corporativo',
+    text: 'Visibilidad para decidir: KPI de cumplimiento, riesgos identificados y comparación entre sedes o razones sociales, sin esperar al reporte de fin de mes.',
   },
   {
-    icon: Scale,
-    title: 'Equipos legales y de cumplimiento',
-    text: 'Centraliza normativa, plazos y evidencias en un solo repositorio auditable. Responde a cualquier requerimiento sin tener que reconstruir el historial a mano.',
+    icon: UserCog,
+    title: 'Responsable de cumplimiento',
+    text: 'Control integrado de requisitos, permisos críticos, auditorías, riesgos y planes de acción. Responde a cualquier fiscalización sin reconstruir el historial a mano.',
   },
   {
-    icon: Calculator,
-    title: 'Finanzas y contabilidad',
-    text: 'Anticipa vencimientos fiscales y evita recargos por olvido. Ten a la vista qué está pagado, qué está pendiente y qué requiere atención esta semana.',
-  },
-  {
-    icon: Network,
-    title: 'Grupos y multi-sede',
-    text: 'Gestiona el cumplimiento de varias razones sociales desde un solo lugar. Compara el estado de cada sede y detecta a tiempo dónde se está quedando atrás.',
+    icon: MapPin,
+    title: 'Gerentes de sede',
+    text: 'Claridad sobre qué hacer y para cuándo. Cada gerente ve sus tareas, plazos y evidencias, sin depender de correos ni hojas de cálculo.',
   },
 ]
 
 export default function Audience() {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section id="beneficios" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <h2 className="font-heading font-semibold text-3xl md:text-4xl text-azul">
-            Diseñado para equipos que no pueden permitirse un olvido
+          <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
+            Beneficios
+          </span>
+          <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl text-azul">
+            Cada rol ve lo que necesita
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">
-            Sin importar el tamaño de tu empresa, cumplir a tiempo depende de tener la
-            información correcta al alcance de la mano. Normvix se adapta al perfil de cada
-            equipo para que nadie dependa de la memoria de una sola persona.
+            Desde un grupo corporativo con varias plantas hasta un comercio con un solo
+            local, Normvix le da a cada persona la vista que le corresponde.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {segments.map(({ icon: Icon, title, text }, i) => (
             <Reveal key={title} delay={i * 100}>
               <div className="group h-full rounded-2xl border border-black/5 p-6 hover:border-turquesa/40 hover:shadow-lg hover:shadow-azul/5 transition-all">

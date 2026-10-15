@@ -17,7 +17,7 @@ export default function VideoModal({ open, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-azul/80 backdrop-blur-sm p-4 animate-fade-up"
+      className="fixed inset-0 z-100 flex items-center justify-center bg-azul/80 backdrop-blur-sm p-4 animate-fade-up"
       style={{ animationDuration: '0.3s' }}
       onClick={onClose}
     >

@@ -3,23 +3,23 @@ import Reveal from './Reveal'
 const pillars = [
   {
     n: '01',
-    title: 'Control total',
-    text: 'Visibilidad y seguimiento de cada obligación legal, fiscal y operativa, en un solo lugar. Sabes en todo momento qué está al día, qué está por vencer y qué requiere acción inmediata.',
+    title: 'Marco legal venezolano propio',
+    text: 'Normativa nacional, estatal y municipal levantada y mantenida por nuestro equipo. No dependes de que alguien en tu empresa esté al tanto de cada gaceta.',
   },
   {
     n: '02',
-    title: 'Claridad ejecutiva',
-    text: 'Reportes y tableros pensados para que la dirección tome decisiones sin fricción. Sin exportar datos ni armar presentaciones manuales antes de cada reunión.',
+    title: 'Priorización por riesgo',
+    text: 'No todas las obligaciones pesan igual. Normvix ordena las brechas por su consecuencia real, desde una multa hasta un cierre preventivo.',
   },
   {
     n: '03',
-    title: 'Prevención activa',
-    text: 'Alertas automáticas antes de cada vencimiento, no después. El equipo responsable se entera con tiempo suficiente para actuar, no para justificar un atraso.',
+    title: 'Aplicabilidad a tu realidad',
+    text: 'Los requisitos se definen según la actividad, la ubicación y el tamaño de cada sede, no con una lista genérica que nadie termina de revisar.',
   },
   {
     n: '04',
-    title: 'Confianza y trazabilidad',
-    text: 'Historial auditable de cada acción, evidencia y responsable. Frente a cualquier fiscalización o auditoría, la evidencia está lista y disponible al instante.',
+    title: 'Gestión integrada y trazable',
+    text: 'Requisitos, evidencias, responsables, acciones e indicadores conectados en un solo historial auditable que no se pierde cuando cambia el equipo.',
   },
 ]
 
@@ -29,14 +29,14 @@ export default function Features() {
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
-            La plataforma
+            Por qué Normvix
           </span>
           <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl">
-            Todo lo que necesitas para operar con tranquilidad
+            Más que un calendario de vencimientos
           </h2>
           <p className="mt-4 text-white/60 leading-relaxed">
-            Normvix se construye sobre cuatro pilares que convierten el cumplimiento en un
-            proceso gestionado por resultados, no en una carrera contra el calendario.
+            Normvix te lleva de saber qué te exige la ley a poder demostrar, con evidencia,
+            que lo estás cumpliendo.
           </p>
         </Reveal>
 

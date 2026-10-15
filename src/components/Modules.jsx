@@ -1,36 +1,55 @@
-import { LayoutDashboard, CalendarCheck, FolderLock, BellRing, FileBarChart, Building } from 'lucide-react'
+import {
+  BookOpen,
+  ScanSearch,
+  FileClock,
+  ShieldAlert,
+  ListChecks,
+  ClipboardCheck,
+  FileBarChart,
+  LayoutDashboard,
+} from 'lucide-react'
 import Reveal from './Reveal'
 
 const modules = [
   {
-    icon: LayoutDashboard,
-    title: 'Dashboard ejecutivo',
-    text: 'Visión de 360° del estado de cumplimiento de tu empresa en tiempo real. Filtra por área, sede o tipo de obligación sin salir del tablero.',
+    icon: BookOpen,
+    title: 'Marco legal',
+    text: 'Biblioteca de normativa venezolana nacional, estatal y municipal, organizada por autoridad y siempre actualizada. Consulta el texto que respalda cada obligación.',
   },
   {
-    icon: CalendarCheck,
-    title: 'Calendario de obligaciones',
-    text: 'Vencimientos legales, fiscales y operativos organizados en una sola vista. Cada obligación tiene un responsable y una fecha, sin ambigüedad.',
+    icon: ScanSearch,
+    title: 'Aplicabilidad',
+    text: 'Diagnóstico normativo de cada sede según su actividad, ubicación y tamaño. Sabes exactamente qué requisitos te exige la ley, y cuáles no.',
   },
   {
-    icon: FolderLock,
-    title: 'Gestión documental',
-    text: 'Repositorio centralizado y seguro para toda tu evidencia de cumplimiento. Versiones, permisos y accesos quedan registrados automáticamente.',
+    icon: FileClock,
+    title: 'Permisos críticos',
+    text: 'Licencias, permisos y solvencias con su vigencia, responsable y estatus. Alertas automáticas antes de cada vencimiento, con escalamiento si nadie actúa.',
   },
   {
-    icon: BellRing,
-    title: 'Alertas inteligentes',
-    text: 'Notificaciones automáticas antes de cada vencimiento, por el canal que prefieras. Escalan a un supervisor si el responsable no actúa a tiempo.',
+    icon: ShieldAlert,
+    title: 'Riesgos',
+    text: 'Jerarquiza cada incumplimiento según su consecuencia: multa, paralización o cierre del establecimiento. Atiende primero lo que más expone a tu empresa.',
+  },
+  {
+    icon: ListChecks,
+    title: 'Planes de acción',
+    text: 'Convierte cada brecha en tareas con responsable, acciones y fecha compromiso. Da seguimiento hasta el cierre, sin perder el historial.',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Auditorías',
+    text: 'Evalúa el cumplimiento en campo y registra evidencia digital verificada en el momento. Detecta brechas antes de que lo haga la autoridad.',
   },
   {
     icon: FileBarChart,
-    title: 'Reportes automáticos',
-    text: 'Informes listos para directorio, sin armar presentaciones a mano. Genera el reporte del período con un solo clic, cuando lo necesites.',
+    title: 'Reportes',
+    text: 'Resultados y evidencias de cumplimiento listos para la dirección o para una fiscalización, generados con un solo clic.',
   },
   {
-    icon: Building,
-    title: 'Multi-empresa',
-    text: 'Administra el cumplimiento de varias razones sociales desde una sola cuenta. Compara el desempeño entre empresas o sedes en segundos.',
+    icon: LayoutDashboard,
+    title: 'Tableros y KPI',
+    text: 'Indicadores en tiempo real con semáforo verde, amarillo y rojo. Compara el nivel de cumplimiento entre sedes o razones sociales.',
   },
 ]
 
@@ -47,12 +66,12 @@ export default function Modules() {
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">
             Cada módulo resuelve una parte del proceso, pero funcionan mejor juntos: la
-            información fluye del calendario a las alertas, de las alertas a los reportes,
-            sin doble digitación.
+            información fluye del marco legal a la aplicabilidad, de los riesgos a los planes
+            de acción y de ahí a los tableros, sin doble digitación.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {modules.map(({ icon: Icon, title, text }, i) => (
             <Reveal key={title} delay={i * 80}>
               <div className="group h-full rounded-2xl border border-black/5 p-6 hover:border-turquesa/40 hover:shadow-lg hover:shadow-azul/5 transition-all">

@@ -1,26 +1,26 @@
-import { FolderX, CalendarClock, GitBranch, EyeOff } from 'lucide-react'
+import { Landmark, Coins, FolderX, ShieldAlert } from 'lucide-react'
 import Reveal from './Reveal'
 
 const problems = [
   {
+    icon: Landmark,
+    title: 'Incertidumbre normativa',
+    text: 'Las exigencias están fragmentadas entre el SENIAT, las alcaldías, los bomberos, los ministerios y los institutos reguladores. Saber qué aplica a tu empresa, y cuándo, es un trabajo en sí mismo.',
+  },
+  {
+    icon: Coins,
+    title: 'Sobrecosto operativo',
+    text: 'Personal dedicado exclusivamente a revisar carpetas y rastrear fechas. Horas de nómina que se van en seguimiento manual en lugar de en la operación del negocio.',
+  },
+  {
     icon: FolderX,
-    title: 'Información dispersa',
-    text: 'Los datos viven en hojas de cálculo, correos y carpetas compartidas que nadie termina de actualizar. Cada auditoría se convierte en horas buscando el documento correcto.',
+    title: 'Gestión manual',
+    text: 'Hojas de cálculo y carpetas físicas vulnerables al error humano y al desorden. Cuando alguien deja la empresa, el historial de permisos y trámites se va con esa persona.',
   },
   {
-    icon: CalendarClock,
-    title: 'Plazos inciertos',
-    text: 'Vencimientos legales y fiscales que se descubren demasiado tarde, cuando ya no hay margen de maniobra. Sin un calendario centralizado, cada fecha depende de que alguien la recuerde.',
-  },
-  {
-    icon: GitBranch,
-    title: 'Acciones sin seguimiento',
-    text: 'Las tareas correctivas se registran pero nadie hace seguimiento. Sin responsables claros ni alertas automáticas, los hallazgos quedan abiertos indefinidamente.',
-  },
-  {
-    icon: EyeOff,
-    title: 'Sin visibilidad ejecutiva',
-    text: 'La dirección no tiene indicadores consolidados del estado real de cumplimiento. Las decisiones se toman de forma reactiva, después de que el problema ya ocurrió.',
+    icon: ShieldAlert,
+    title: 'Alto riesgo financiero',
+    text: 'Un permiso, licencia o solvencia vencida puede traducirse en multas severas, la paralización de líneas de producción o el cierre preventivo del establecimiento.',
   },
 ]
 
@@ -30,15 +30,15 @@ export default function Problems() {
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
-            La gestión de obligaciones, hoy
+            El reto regulatorio
           </span>
           <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl text-azul">
-            Cuatro problemas que se repiten en toda empresa
+            Operar en Venezuela exige cumplir con todos, a tiempo
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">
-            Son fallas de proceso, no de esfuerzo: sin un sistema centralizado, hasta los
-            equipos más disciplinados terminan reaccionando a última hora en lugar de
-            anticiparse.
+            Es un entorno altamente fiscalizado, complejo y repartido entre múltiples
+            autoridades nacionales, estatales y municipales. Sin un sistema centralizado,
+            hasta los equipos más disciplinados terminan reaccionando a última hora.
           </p>
         </Reveal>
 

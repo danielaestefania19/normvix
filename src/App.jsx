@@ -4,6 +4,7 @@ import Audience from './components/Audience'
 import Problems from './components/Problems'
 import Features from './components/Features'
 import Modules from './components/Modules'
+import HowItWorks from './components/HowItWorks'
 import Results from './components/Results'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
@@ -14,10 +15,11 @@ function App() {
     <div className="bg-marfil">
       <Header />
       <Hero />
-      <Audience />
       <Problems />
-      <Features />
       <Modules />
+      <HowItWorks />
+      <Features />
+      <Audience />
       <Results />
       <FAQ />
       <CTA />

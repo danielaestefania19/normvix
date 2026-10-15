@@ -6,8 +6,9 @@ import iconFaq from '../assets/icon-faq.png'
 
 const links = [
   { href: '#problematica', label: 'Problemática' },
-  { href: '#plataforma', label: 'Plataforma' },
   { href: '#modulos', label: 'Módulos' },
+  { href: '#como-funciona', label: 'Cómo funciona' },
+  { href: '#beneficios', label: 'Beneficios' },
   { href: '#contacto', label: 'Contacto' },
 ]
 
