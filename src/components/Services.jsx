@@ -57,8 +57,8 @@ export default function Services() {
               >
                 {featured && (
                   <>
-                    <span className="absolute -z-10 hidden lg:block -bottom-6 right-24 h-44 w-14 bg-turquesa skew-x-[34deg] transition-transform duration-700 group-hover:translate-x-4" aria-hidden="true" />
-                    <span className="absolute -z-10 hidden lg:block -bottom-6 right-12 h-44 w-5 bg-ambar skew-x-[34deg] transition-transform duration-700 group-hover:translate-x-4" aria-hidden="true" />
+                    <span className="absolute -z-10 hidden lg:block -bottom-6 right-24 h-44 w-14 bg-turquesa skew-x-34 transition-transform duration-700 group-hover:translate-x-4" aria-hidden="true" />
+                    <span className="absolute -z-10 hidden lg:block -bottom-6 right-12 h-44 w-5 bg-ambar skew-x-34 transition-transform duration-700 group-hover:translate-x-4" aria-hidden="true" />
                   </>
                 )}
 

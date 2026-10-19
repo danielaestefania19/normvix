@@ -29,8 +29,8 @@ export default function Roadmap() {
 
   return (
     <section id="innovacion" className="relative isolate overflow-hidden py-20 md:py-28 bg-negro text-white">
-      <div className="absolute -z-10 -top-20 -bottom-20 left-[6%] w-40 bg-turquesa/10 skew-x-[34deg]" aria-hidden="true" />
-      <div className="absolute -z-10 -top-20 -bottom-20 left-[24%] w-8 bg-ambar/10 skew-x-[34deg]" aria-hidden="true" />
+      <div className="absolute -z-10 -top-20 -bottom-20 left-[6%] w-40 bg-turquesa/10 skew-x-34" aria-hidden="true" />
+      <div className="absolute -z-10 -top-20 -bottom-20 left-[24%] w-8 bg-ambar/10 skew-x-34" aria-hidden="true" />
       <div className="absolute -z-10 inset-0 bg-dots opacity-20 invert" aria-hidden="true" />
 
       <div className="mx-auto max-w-7xl px-6 md:px-10">
