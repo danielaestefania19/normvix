@@ -1,14 +1,91 @@
 @import "tailwindcss";
 
+/*
+ * Paleta del Brandbook Normvix 2026.
+ * El cian de marca (#3AE0E3) no tiene contraste suficiente como texto sobre fondos
+ * claros: ahí se usa turquesa-ink. Sobre fondos oscuros, turquesa.
+ */
 @theme {
-  --color-azul: #142b44;
-  --color-turquesa: #18a6a0;
-  --color-marfil: #f7f8fa;
-  --color-grafito: #29333d;
-  --color-ambar: #f2b84b;
+  --color-negro: #000000;
+  --color-azul: #0b2145;
+  --color-turquesa: #3ae0e3;
+  --color-turquesa-ink: #087a7d;
+  --color-marfil: #f5f7fa;
+  --color-grafito: #16181d;
+  --color-ambar: #ffd00a;
 
-  --font-heading: "Poppins", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Monument Extended", "Unbounded", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+}
+
+/*
+ * Monument Extended es la tipografía de títulos del brandbook, pero la versión
+ * descargada es "Free for personal use" y no puede publicarse en un sitio comercial.
+ * Con la licencia comercial de Pangram Pangram, colocar los .woff2 en public/fonts/
+ * y descomentar este bloque. Mientras tanto se usa Unbounded (Google Fonts).
+ *
+ * @font-face {
+ *   font-family: "Monument Extended";
+ *   src: url("/fonts/MonumentExtended-Regular.woff2") format("woff2");
+ *   font-weight: 400 600;
+ *   font-display: swap;
+ * }
+ * @font-face {
+ *   font-family: "Monument Extended";
+ *   src: url("/fonts/MonumentExtended-Ultrabold.woff2") format("woff2");
+ *   font-weight: 700 900;
+ *   font-display: swap;
+ * }
+ */
+
+@layer components {
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-turquesa-ink);
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 1.75rem;
+    height: 3px;
+    background: var(--color-ambar);
+  }
+}
+
+/* Resaltado de marca: franja cian diagonal detrás del texto */
+.brand-mark {
+  position: relative;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.brand-mark::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: -0.12em;
+  right: -0.12em;
+  bottom: 0.06em;
+  height: 0.45em;
+  background: var(--color-turquesa);
+  transform-origin: left;
+  animation: mark-in 0.9s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes mark-in {
+  from {
+    transform: skewX(-30deg) scaleX(0);
+  }
+  to {
+    transform: skewX(-30deg) scaleX(1);
+  }
 }
 
 html {
@@ -82,7 +159,7 @@ body {
 }
 
 .text-gradient {
-  background-image: linear-gradient(90deg, var(--color-turquesa), #3dd6cc, #0e7c8a, var(--color-turquesa));
+  background-image: linear-gradient(90deg, var(--color-turquesa), #c9fbfc, var(--color-turquesa));
   background-size: 300% 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -146,7 +223,7 @@ body {
 }
 
 .bg-dots {
-  background-image: radial-gradient(rgb(20 43 68 / 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(11 33 69 / 0.12) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
@@ -161,7 +238,28 @@ body {
   .text-gradient,
   .animate-marquee,
   .animate-ping-soft,
+  .brand-mark::before,
   .btn-shine:hover::after {
+    animation: none;
+  }
+}
+
+/* Franjas diagonales del Hero: entran desde arriba como en la portada del brandbook */
+@keyframes stripe-in {
+  from {
+    transform: skewX(34deg) translateY(-110%);
+  }
+  to {
+    transform: skewX(34deg) translateY(0);
+  }
+}
+
+.hero-stripe {
+  animation: stripe-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-stripe {
     animation: none;
   }
 }

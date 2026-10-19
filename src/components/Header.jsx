@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import logoHorizontal from '../assets/logo-horizontal.png'
+import logoWhite from '../assets/logo-normvix-white.png'
 
 const links = [
   { href: '#problematica', label: 'Problemática' },
@@ -26,8 +26,8 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-marfil/80 backdrop-blur-md border-b border-black/5 transition-shadow duration-300 ${
-        progress > 0 ? 'shadow-lg shadow-azul/5' : ''
+      className={`sticky top-0 z-50 bg-negro/95 backdrop-blur-md border-b border-white/10 transition-shadow duration-300 ${
+        progress > 0 ? 'shadow-lg shadow-black/20' : ''
       }`}
     >
       <div
@@ -37,7 +37,7 @@ export default function Header() {
       />
       <div className="mx-auto max-w-7xl px-6 h-18 py-3 flex items-center justify-between">
         <a href="#top">
-          <img src={logoHorizontal} alt="Normvix" className="h-25 w-auto" />
+          <img src={logoWhite} alt="Normvix" className="h-8 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -45,7 +45,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="relative text-sm font-medium text-grafito/80 hover:text-turquesa transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-turquesa after:transition-all after:duration-300 hover:after:w-full"
+              className="relative text-sm font-medium text-white/75 hover:text-turquesa transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-turquesa after:transition-all after:duration-300 hover:after:w-full"
             >
               {link.label}
             </a>
@@ -54,14 +54,14 @@ export default function Header() {
 
         <a
           href="#contacto"
-          className="btn-shine hidden md:inline-flex items-center rounded-full bg-azul text-white text-sm font-semibold px-5 py-2.5 transition-all hover:bg-turquesa hover:-translate-y-0.5 hover:shadow-lg hover:shadow-turquesa/30"
+          className="btn-shine hidden md:inline-flex items-center rounded-full bg-turquesa text-negro text-sm font-bold px-5 py-2.5 transition-all hover:bg-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-turquesa/30"
         >
           Solicitar demo
         </a>
 
         <button
           type="button"
-          className="md:hidden text-azul"
+          className="md:hidden text-white"
           onClick={() => setOpen((o) => !o)}
           aria-label="Abrir menú"
         >
@@ -70,12 +70,12 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="animate-fade-up md:hidden border-t border-black/5 bg-marfil px-6 py-4 flex flex-col gap-4">
+        <div className="animate-fade-up md:hidden border-t border-white/10 bg-negro px-6 py-4 flex flex-col gap-4">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-grafito/80"
+              className="text-sm font-medium text-white/80"
               onClick={() => setOpen(false)}
             >
               {link.label}
@@ -83,7 +83,7 @@ export default function Header() {
           ))}
           <a
             href="#contacto"
-            className="inline-flex justify-center rounded-full bg-azul text-white text-sm font-semibold px-5 py-2.5"
+            className="inline-flex justify-center rounded-full bg-turquesa text-negro text-sm font-bold px-5 py-2.5"
             onClick={() => setOpen(false)}
           >
             Solicitar demo

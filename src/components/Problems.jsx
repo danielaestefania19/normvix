@@ -29,10 +29,10 @@ export default function Problems() {
     <section id="problematica" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
+          <span className="eyebrow">
             El reto regulatorio
           </span>
-          <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl text-azul">
+          <h2 className="mt-4 font-heading font-bold text-2xl md:text-[2.1rem] leading-tight text-negro">
             Operar en Venezuela exige cumplir con todos, a tiempo
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">

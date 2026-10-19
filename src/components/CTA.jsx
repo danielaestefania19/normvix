@@ -32,9 +32,10 @@ export default function CTA() {
     <section id="contacto" className="py-20 md:py-28 bg-marfil px-6">
       <Reveal
         variant="scale"
-        className="relative isolate overflow-hidden mx-auto max-w-5xl rounded-4xl bg-linear-to-br from-azul via-azul to-[#0f4f5c] px-6 py-16 md:px-16 md:py-20 text-center shadow-2xl shadow-azul/20"
+        className="relative isolate overflow-hidden mx-auto max-w-5xl rounded-4xl bg-linear-to-br from-negro via-negro to-azul px-6 py-16 md:px-16 md:py-20 text-center shadow-2xl shadow-black/25"
       >
-        <div className="absolute -z-10 -top-24 -left-24 w-80 h-80 rounded-full bg-turquesa/30 blur-3xl animate-blob" aria-hidden="true" />
+        <div className="absolute -z-10 -top-10 -bottom-10 left-[4%] w-20 bg-turquesa skew-x-34" aria-hidden="true" />
+        <div className="absolute -z-10 -top-10 -bottom-10 left-[14%] w-6 bg-ambar skew-x-34" aria-hidden="true" />
         <div
           className="absolute -z-10 -bottom-24 -right-24 w-80 h-80 rounded-full bg-ambar/20 blur-3xl animate-blob"
           style={{ animationDelay: '-5s' }}
@@ -42,7 +43,7 @@ export default function CTA() {
         />
         <div className="absolute -z-10 inset-0 bg-dots opacity-20 invert" aria-hidden="true" />
 
-        <h2 className="font-heading font-semibold text-3xl md:text-5xl text-white leading-tight">
+        <h2 className="font-heading font-bold text-2xl md:text-[2.6rem] text-white leading-tight">
           ¿Listo para tomar el control
           <br className="hidden md:block" /> de tus <span className="text-gradient">obligaciones</span>?
         </h2>

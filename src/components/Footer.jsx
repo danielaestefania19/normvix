@@ -1,6 +1,6 @@
 import { ArrowUp, ArrowUpRight, ArrowRight } from 'lucide-react'
 import Reveal from './Reveal'
-import logoHorizontal from '../assets/logo-horizontal.png'
+import logoWhite from '../assets/logo-normvix-white.png'
 import iconContact from '../assets/icon-contact.png'
 import iconLocation from '../assets/icon-location.png'
 import iconNetwork from '../assets/icon-network.png'
@@ -42,7 +42,7 @@ function FooterLink({ href, children }) {
 
 export default function Footer() {
   return (
-    <footer className="relative isolate overflow-hidden bg-azul text-white/60">
+    <footer className="relative isolate overflow-hidden bg-negro text-white/60">
       <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-turquesa to-transparent" aria-hidden="true" />
       <div className="absolute -z-10 -top-40 left-1/4 w-lg h-128 rounded-full bg-turquesa/10 blur-3xl animate-blob" aria-hidden="true" />
       <div
@@ -87,8 +87,8 @@ export default function Footer() {
 
       <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
         <div>
-          <img src={logoHorizontal} alt="Normvix" className="h-18 w-auto -ml-3" />
-          <p className="mt-2 font-heading font-semibold text-lg text-white">
+          <img src={logoWhite} alt="Normvix" className="h-8 w-auto" />
+          <p className="mt-6 font-heading font-bold text-base text-white">
             Tus obligaciones, <span className="text-gradient">bajo control.</span>
           </p>
           <p className="mt-3 text-sm max-w-sm leading-relaxed">
@@ -98,7 +98,7 @@ export default function Footer() {
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href="#contacto"
-              className="btn-shine inline-flex items-center gap-2 rounded-full bg-ambar text-azul text-sm font-semibold px-5 py-2.5 shadow-lg shadow-ambar/20 transition-all hover:-translate-y-0.5"
+              className="btn-shine inline-flex items-center gap-2 rounded-full bg-turquesa text-negro text-sm font-bold px-5 py-2.5 shadow-lg shadow-turquesa/20 transition-all hover:bg-white hover:-translate-y-0.5"
             >
               Solicitar demo
               <ArrowRight size={14} />
@@ -113,7 +113,7 @@ export default function Footer() {
         </div>
 
         <nav aria-label="Navegación del sitio">
-          <p className="text-xs font-semibold tracking-widest uppercase text-white">Navegación</p>
+          <p className="eyebrow text-white">Navegación</p>
           <ul className="mt-5 space-y-3">
             {links.map((link) => (
               <li key={link.href}>
@@ -124,7 +124,7 @@ export default function Footer() {
         </nav>
 
         <div>
-          <p className="text-xs font-semibold tracking-widest uppercase text-white">Plataforma</p>
+          <p className="eyebrow text-white">Plataforma</p>
           <ul className="mt-5 space-y-3">
             {platform.map((item) => (
               <li key={item}>

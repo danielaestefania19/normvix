@@ -24,10 +24,10 @@ export default function Audience() {
     <section id="beneficios" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
+          <span className="eyebrow">
             Beneficios
           </span>
-          <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl text-azul">
+          <h2 className="mt-4 font-heading font-bold text-2xl md:text-[2.1rem] leading-tight text-negro">
             Cada rol ve lo que necesita
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">
@@ -44,8 +44,8 @@ export default function Audience() {
                   className="absolute -z-10 -bottom-16 -right-16 w-40 h-40 rounded-full bg-ambar/15 blur-2xl transition-transform duration-700 group-hover:scale-150"
                   aria-hidden="true"
                 />
-                <div className="relative w-14 h-14 rounded-2xl bg-linear-to-br from-turquesa to-azul flex items-center justify-center shadow-lg shadow-turquesa/20 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                  <Icon size={26} className="text-white" />
+                <div className="relative w-14 h-14 rounded-2xl bg-negro flex items-center justify-center shadow-lg shadow-black/20 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Icon size={26} className="text-turquesa" />
                 </div>
                 <h3 className="mt-5 font-heading font-semibold text-azul">{title}</h3>
                 <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>

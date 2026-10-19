@@ -26,18 +26,15 @@ const pillars = [
 export default function Features() {
   return (
     <section id="plataforma" className="relative overflow-hidden py-20 md:py-28 bg-azul text-white">
-      <div className="absolute -top-40 right-0 w-lg h-128 rounded-full bg-turquesa/20 blur-3xl animate-blob" aria-hidden="true" />
-      <div
-        className="absolute -bottom-40 -left-20 w-md h-112 rounded-full bg-ambar/10 blur-3xl animate-blob"
-        style={{ animationDelay: '-6s' }}
-        aria-hidden="true"
-      />
+      <div className="absolute -top-20 -bottom-20 right-[12%] w-56 bg-turquesa/10 skew-x-34" aria-hidden="true" />
+      <div className="absolute -top-20 -bottom-20 right-[2%] w-16 bg-turquesa/20 skew-x-34" aria-hidden="true" />
+      <div className="absolute -top-40 right-0 w-lg h-128 rounded-full bg-turquesa/10 blur-3xl animate-blob" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
+          <span className="eyebrow text-turquesa">
             Por qué Normvix
           </span>
-          <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl">
+          <h2 className="mt-4 font-heading font-bold text-2xl md:text-[2.1rem] leading-tight">
             Más que un calendario de vencimientos
           </h2>
           <p className="mt-4 text-white/60 leading-relaxed">

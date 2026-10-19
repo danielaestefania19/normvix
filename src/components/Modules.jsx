@@ -58,10 +58,10 @@ export default function Modules() {
     <section id="modulos" className="py-20 md:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
+          <span className="eyebrow">
             Módulos
           </span>
-          <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl text-azul">
+          <h2 className="mt-4 font-heading font-bold text-2xl md:text-[2.1rem] leading-tight text-negro">
             Una plataforma, todas las piezas del cumplimiento
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">
@@ -83,8 +83,8 @@ export default function Modules() {
                   className="absolute -z-10 -right-10 -top-10 w-32 h-32 rounded-full bg-turquesa/10 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   aria-hidden="true"
                 />
-                <div className="relative w-11 h-11 rounded-xl bg-turquesa/10 flex items-center justify-center transition-all duration-300 group-hover:bg-turquesa group-hover:scale-110 group-hover:-rotate-6">
-                  <Icon size={22} className="text-turquesa transition-colors group-hover:text-white" />
+                <div className="relative w-11 h-11 rounded-xl bg-turquesa/15 flex items-center justify-center transition-all duration-300 group-hover:bg-turquesa group-hover:scale-110 group-hover:-rotate-6">
+                  <Icon size={22} className="text-turquesa-ink transition-colors group-hover:text-negro" />
                 </div>
                 <h3 className="mt-5 font-heading font-semibold text-azul">{title}</h3>
                 <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>

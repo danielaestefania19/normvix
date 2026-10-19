@@ -31,10 +31,10 @@ export default function HowItWorks() {
     <section id="como-funciona" className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
+          <span className="eyebrow">
             Cómo funciona
           </span>
-          <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl text-azul">
+          <h2 className="mt-4 font-heading font-bold text-2xl md:text-[2.1rem] leading-tight text-negro">
             Normvix en acción, en cuatro pasos
           </h2>
           <p className="mt-4 text-grafito/65 leading-relaxed">
@@ -44,7 +44,7 @@ export default function HowItWorks() {
         </Reveal>
 
         <div ref={ref} className="relative mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="absolute hidden lg:block left-[12.5%] right-[12.5%] top-11 h-0.5 bg-azul/10" aria-hidden="true">
+          <div className="absolute hidden lg:block left-[12.5%] right-[12.5%] top-11 h-1 bg-negro/10" aria-hidden="true">
             <div
               className={`h-full bg-linear-to-r from-turquesa to-ambar origin-left transition-transform duration-1600 ease-out ${
                 inView ? 'scale-x-100' : 'scale-x-0'
@@ -55,7 +55,7 @@ export default function HowItWorks() {
           {steps.map(({ n, title, text }, i) => (
             <Reveal key={n} delay={i * 250}>
               <div className="group relative h-full rounded-2xl bg-white border border-black/5 p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-turquesa/10 hover:border-turquesa/40 lg:text-center lg:bg-transparent lg:border-transparent lg:hover:bg-white lg:hover:border-turquesa/40">
-                <span className="relative inline-flex w-10 h-10 items-center justify-center rounded-full bg-turquesa font-heading font-semibold text-sm text-white shadow-lg shadow-turquesa/30 ring-8 ring-marfil transition-transform duration-300 group-hover:scale-110">
+                <span className="relative inline-flex w-10 h-10 items-center justify-center rounded-full bg-turquesa font-heading font-bold text-sm text-negro shadow-lg shadow-turquesa/30 ring-8 ring-marfil transition-transform duration-300 group-hover:scale-110">
                   <span className="absolute inset-0 rounded-full bg-turquesa animate-ping-soft" style={{ animationDelay: `${i * 500}ms` }} aria-hidden="true" />
                   <span className="relative">{n}</span>
                 </span>

@@ -48,10 +48,10 @@ export default function FAQ() {
     <section id="faq" className="py-20 md:py-28 bg-white border-t border-black/5">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal className="max-w-2xl">
-          <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
+          <span className="eyebrow">
             Preguntas frecuentes
           </span>
-          <h2 className="mt-3 font-heading font-semibold text-3xl md:text-4xl text-azul">
+          <h2 className="mt-4 font-heading font-bold text-2xl md:text-[2.1rem] leading-tight text-negro">
             ¿Tienes dudas? Aquí resolvemos las más comunes
           </h2>
         </Reveal>
@@ -70,7 +70,7 @@ export default function FAQ() {
                   <span className="font-heading font-semibold text-azul">{q}</span>
                   <ChevronDown
                     size={20}
-                    className={`shrink-0 text-turquesa transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                    className={`shrink-0 text-turquesa-ink transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                   />
                 </button>
                 <div
