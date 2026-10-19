@@ -5,23 +5,35 @@ import Reveal from './Reveal'
 const faqs = [
   {
     q: '¿Qué tipo de obligaciones puedo gestionar con Normvix?',
-    a: 'Obligaciones legales, fiscales, laborales y municipales: declaraciones, permisos, renovaciones, pólizas y cualquier compromiso con fecha de vencimiento que tu empresa deba cumplir.',
+    a: 'Licencias, permisos, solvencias y demás requisitos exigidos por el SENIAT, las alcaldías, los bomberos, los ministerios y los institutos reguladores, a nivel nacional, estatal y municipal.',
   },
   {
-    q: 'Normvix reemplaza a mi contador o abogado?',
-    a: 'No. Normvix organiza y centraliza la información para que tu equipo, tus asesores legales y contables trabajen sobre los mismos datos, con recordatorios y evidencia siempre a la mano.',
+    q: '¿Cómo sé qué normas aplican a mi empresa?',
+    a: 'Ese es el punto de partida. El diagnóstico normativo de Normvix identifica los requerimientos que la ley le exige a cada sede según su actividad y ubicación, para que no dependas de revisar la normativa por tu cuenta.',
   },
   {
-    q: '¿Cuánto tiempo toma implementar Normvix en mi empresa?',
-    a: 'La mayoría de los equipos carga su primer calendario de obligaciones y empieza a recibir alertas en menos de una semana, sin necesidad de instalar nada.',
+    q: '¿Normvix reemplaza a mi contador o abogado?',
+    a: 'No. Normvix centraliza la información para que tu equipo y tus asesores trabajen sobre los mismos datos. Próximamente, nuestro marketplace jurídico también te conectará con abogados y gestores regionales calificados cuando necesites apoyo en un trámite.',
+  },
+  {
+    q: '¿Sirve para una PYME o solo para grandes empresas?',
+    a: 'Para ambas. El plan B2B PYMES incluye las funciones esenciales de cumplimiento con límites de usuarios y establecimientos. El plan B2B Big Corp suma más usuarios, múltiples plantas o razones sociales y gestión centralizada desde un solo tablero.',
+  },
+  {
+    q: '¿Qué pasa con el historial si cambia el personal?',
+    a: 'Se queda en la empresa. Permisos, vencimientos, evidencias y acciones quedan registrados en Normvix, así que una renuncia o una rotación no significa empezar de cero.',
+  },
+  {
+    q: '¿Cómo me ayuda frente a una inspección o fiscalización?',
+    a: 'Con las auditorías en campo registras evidencia digital verificada en el momento, y los reportes reúnen todo el respaldo de cumplimiento en un solo documento, listo para presentarlo.',
   },
   {
     q: '¿Mis datos y documentos están seguros?',
-    a: 'Sí. Toda la información se almacena cifrada, con control de accesos y un historial auditable de quién vio o modificó cada documento.',
+    a: 'Sí. La información se almacena cifrada, con control de accesos y un historial auditable de quién vio o modificó cada documento. Estamos incorporando blockchain para garantizar que ninguna evidencia pueda ser alterada.',
   },
   {
-    q: '¿Puedo gestionar varias empresas o sedes desde una sola cuenta?',
-    a: 'Sí, el módulo multi-empresa te permite administrar el cumplimiento de distintas razones sociales o sucursales y comparar su desempeño desde un solo panel.',
+    q: '¿Necesito instalar algo?',
+    a: 'No. Normvix funciona en la nube y solo necesitas un navegador. En la demo revisamos tus sedes y obligaciones y te damos un estimado de puesta en marcha.',
   },
   {
     q: '¿Qué pasa si necesito ayuda?',

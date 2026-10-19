@@ -44,10 +44,14 @@ export default function Problems() {
 
         <div className="mt-14 grid md:grid-cols-2 gap-6">
           {problems.map(({ icon: Icon, title, text }, i) => (
-            <Reveal key={title} delay={i * 100}>
-              <div className="flex gap-5 rounded-2xl bg-white border border-black/5 p-6">
-                <div className="w-11 h-11 shrink-0 rounded-xl bg-red-50 flex items-center justify-center">
-                  <Icon size={22} className="text-red-400" />
+            <Reveal key={title} delay={i * 100} variant={i % 2 === 0 ? 'left' : 'right'}>
+              <div className="group relative h-full overflow-hidden flex gap-5 rounded-2xl bg-white border border-black/5 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-red-500/5 hover:border-red-200">
+                <span
+                  className="absolute left-0 top-0 h-full w-1 bg-linear-to-b from-red-400 to-ambar origin-top scale-y-0 transition-transform duration-500 group-hover:scale-y-100"
+                  aria-hidden="true"
+                />
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-red-50 flex items-center justify-center transition-all duration-300 group-hover:bg-red-400 group-hover:rotate-6">
+                  <Icon size={22} className="text-red-400 transition-colors group-hover:text-white" />
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-azul">{title}</h3>

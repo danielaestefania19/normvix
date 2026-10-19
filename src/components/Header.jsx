@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import logoHorizontal from '../assets/logo-horizontal.png'
 
@@ -12,9 +12,29 @@ const links = [
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    function onScroll() {
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      setProgress(max > 0 ? window.scrollY / max : 0)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-marfil/90 backdrop-blur border-b border-black/5">
+    <header
+      className={`sticky top-0 z-50 bg-marfil/80 backdrop-blur-md border-b border-black/5 transition-shadow duration-300 ${
+        progress > 0 ? 'shadow-lg shadow-azul/5' : ''
+      }`}
+    >
+      <div
+        className="absolute left-0 bottom-0 h-0.5 bg-linear-to-r from-turquesa to-ambar origin-left"
+        style={{ transform: `scaleX(${progress})`, width: '100%' }}
+        aria-hidden="true"
+      />
       <div className="mx-auto max-w-7xl px-6 h-18 py-3 flex items-center justify-between">
         <a href="#top">
           <img src={logoHorizontal} alt="Normvix" className="h-25 w-auto" />
@@ -34,7 +54,7 @@ export default function Header() {
 
         <a
           href="#contacto"
-          className="hidden md:inline-flex items-center rounded-full bg-azul text-white text-sm font-semibold px-5 py-2.5 transition-all hover:bg-turquesa hover:scale-[1.03]"
+          className="btn-shine hidden md:inline-flex items-center rounded-full bg-azul text-white text-sm font-semibold px-5 py-2.5 transition-all hover:bg-turquesa hover:-translate-y-0.5 hover:shadow-lg hover:shadow-turquesa/30"
         >
           Solicitar demo
         </a>

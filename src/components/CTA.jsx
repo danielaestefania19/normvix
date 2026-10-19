@@ -29,19 +29,31 @@ export default function CTA() {
   }
 
   return (
-    <section id="contacto" className="py-20 md:py-28 bg-marfil border-t border-black/5">
-      <Reveal className="mx-auto max-w-4xl px-6 text-center">
-        <h2 className="font-heading font-semibold text-3xl md:text-4xl text-azul">
-          ¿Listo para tomar el control de tus obligaciones?
+    <section id="contacto" className="py-20 md:py-28 bg-marfil px-6">
+      <Reveal
+        variant="scale"
+        className="relative isolate overflow-hidden mx-auto max-w-5xl rounded-4xl bg-linear-to-br from-azul via-azul to-[#0f4f5c] px-6 py-16 md:px-16 md:py-20 text-center shadow-2xl shadow-azul/20"
+      >
+        <div className="absolute -z-10 -top-24 -left-24 w-80 h-80 rounded-full bg-turquesa/30 blur-3xl animate-blob" aria-hidden="true" />
+        <div
+          className="absolute -z-10 -bottom-24 -right-24 w-80 h-80 rounded-full bg-ambar/20 blur-3xl animate-blob"
+          style={{ animationDelay: '-5s' }}
+          aria-hidden="true"
+        />
+        <div className="absolute -z-10 inset-0 bg-dots opacity-20 invert" aria-hidden="true" />
+
+        <h2 className="font-heading font-semibold text-3xl md:text-5xl text-white leading-tight">
+          ¿Listo para tomar el control
+          <br className="hidden md:block" /> de tus <span className="text-gradient">obligaciones</span>?
         </h2>
-        <p className="mt-4 text-grafito/65 max-w-xl mx-auto">
+        <p className="mt-5 text-white/65 max-w-xl mx-auto">
           Agenda una demo gratuita y descubre cómo Normvix ayuda a tu empresa a mantenerse al día,
           prevenir riesgos y ganar tranquilidad. Sin instalaciones ni permanencia mínima: solo
           déjanos tu correo y nuestro equipo te contacta en menos de 24 horas.
         </p>
 
         {status === 'sent' ? (
-          <p className="mt-10 text-turquesa font-semibold">
+          <p className="mt-10 text-ambar font-semibold">
             ¡Listo! Recibimos tu correo, te contactaremos muy pronto.
           </p>
         ) : (
@@ -52,12 +64,12 @@ export default function CTA() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="tu@empresa.com"
-              className="flex-1 rounded-full border border-black/10 bg-white px-5 py-3 text-sm outline-none focus:border-turquesa transition-colors"
+              className="flex-1 rounded-full border border-white/15 bg-white/10 backdrop-blur px-5 py-3.5 text-sm text-white placeholder:text-white/40 outline-none focus:border-turquesa focus:bg-white/15 focus:ring-4 focus:ring-turquesa/20 transition-all"
             />
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="rounded-full bg-ambar text-azul text-sm font-semibold px-7 py-3 transition-all hover:brightness-95 hover:scale-[1.03] disabled:opacity-60 disabled:hover:scale-100"
+              className="btn-shine rounded-full bg-ambar text-azul text-sm font-semibold px-7 py-3.5 shadow-lg shadow-ambar/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-ambar/40 disabled:opacity-60 disabled:hover:translate-y-0"
             >
               {status === 'sending' ? 'Enviando...' : 'Solicitar demo'}
             </button>
@@ -65,7 +77,7 @@ export default function CTA() {
         )}
 
         {status === 'error' && (
-          <p className="mt-4 text-sm text-red-500">
+          <p className="mt-4 text-sm text-red-300">
             No pudimos enviar tu solicitud. Intenta de nuevo o escríbenos a contact@normvix.com.
           </p>
         )}

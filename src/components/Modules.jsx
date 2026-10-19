@@ -73,10 +73,18 @@ export default function Modules() {
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {modules.map(({ icon: Icon, title, text }, i) => (
-            <Reveal key={title} delay={i * 80}>
-              <div className="group h-full rounded-2xl border border-black/5 p-6 hover:border-turquesa/40 hover:shadow-lg hover:shadow-azul/5 transition-all">
-                <div className="w-11 h-11 rounded-xl bg-turquesa/10 flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Icon size={22} className="text-turquesa" />
+            <Reveal key={title} delay={(i % 4) * 90} variant="scale">
+              <div className="group relative isolate h-full overflow-hidden rounded-2xl border border-black/5 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-turquesa/40 hover:shadow-xl hover:shadow-turquesa/10">
+                <span
+                  className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-turquesa to-ambar origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"
+                  aria-hidden="true"
+                />
+                <span
+                  className="absolute -z-10 -right-10 -top-10 w-32 h-32 rounded-full bg-turquesa/10 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  aria-hidden="true"
+                />
+                <div className="relative w-11 h-11 rounded-xl bg-turquesa/10 flex items-center justify-center transition-all duration-300 group-hover:bg-turquesa group-hover:scale-110 group-hover:-rotate-6">
+                  <Icon size={22} className="text-turquesa transition-colors group-hover:text-white" />
                 </div>
                 <h3 className="mt-5 font-heading font-semibold text-azul">{title}</h3>
                 <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>

@@ -25,8 +25,14 @@ const pillars = [
 
 export default function Features() {
   return (
-    <section id="plataforma" className="py-20 md:py-28 bg-azul text-white">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="plataforma" className="relative overflow-hidden py-20 md:py-28 bg-azul text-white">
+      <div className="absolute -top-40 right-0 w-lg h-128 rounded-full bg-turquesa/20 blur-3xl animate-blob" aria-hidden="true" />
+      <div
+        className="absolute -bottom-40 -left-20 w-md h-112 rounded-full bg-ambar/10 blur-3xl animate-blob"
+        style={{ animationDelay: '-6s' }}
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
           <span className="text-turquesa text-xs font-semibold tracking-wide uppercase">
             Por qué Normvix
@@ -40,12 +46,14 @@ export default function Features() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid sm:grid-cols-2 gap-x-10 gap-y-12">
+        <div className="mt-14 grid sm:grid-cols-2 gap-6">
           {pillars.map(({ n, title, text }, i) => (
-            <Reveal key={n} delay={i * 100}>
-              <div className="border-t border-white/10 pt-6">
-                <span className="font-heading font-semibold text-turquesa text-sm">{n}</span>
-                <h3 className="mt-3 font-heading font-semibold text-xl">{title}</h3>
+            <Reveal key={n} delay={i * 120} variant={i % 2 === 0 ? 'left' : 'right'}>
+              <div className="group relative h-full rounded-2xl border border-white/10 bg-white/3 backdrop-blur-sm p-8 transition-all duration-300 hover:bg-white/7 hover:border-turquesa/40 hover:-translate-y-1">
+                <span className="font-heading font-bold text-5xl text-gradient opacity-80 transition-opacity group-hover:opacity-100">
+                  {n}
+                </span>
+                <h3 className="mt-4 font-heading font-semibold text-xl">{title}</h3>
                 <p className="mt-2 text-white/60 leading-relaxed max-w-md">{text}</p>
               </div>
             </Reveal>

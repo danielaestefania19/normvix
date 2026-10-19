@@ -38,10 +38,14 @@ export default function Audience() {
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {segments.map(({ icon: Icon, title, text }, i) => (
-            <Reveal key={title} delay={i * 100}>
-              <div className="group h-full rounded-2xl border border-black/5 p-6 hover:border-turquesa/40 hover:shadow-lg hover:shadow-azul/5 transition-all">
-                <div className="w-11 h-11 rounded-xl bg-azul/5 flex items-center justify-center transition-transform group-hover:scale-110">
-                  <Icon size={22} className="text-turquesa" />
+            <Reveal key={title} delay={i * 120}>
+              <div className="group relative isolate h-full overflow-hidden rounded-3xl border border-black/5 bg-linear-to-b from-white to-marfil p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-turquesa/40 hover:shadow-xl hover:shadow-azul/10">
+                <span
+                  className="absolute -z-10 -bottom-16 -right-16 w-40 h-40 rounded-full bg-ambar/15 blur-2xl transition-transform duration-700 group-hover:scale-150"
+                  aria-hidden="true"
+                />
+                <div className="relative w-14 h-14 rounded-2xl bg-linear-to-br from-turquesa to-azul flex items-center justify-center shadow-lg shadow-turquesa/20 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Icon size={26} className="text-white" />
                 </div>
                 <h3 className="mt-5 font-heading font-semibold text-azul">{title}</h3>
                 <p className="mt-2 text-sm text-grafito/65 leading-relaxed">{text}</p>
