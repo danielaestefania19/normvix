@@ -1,10 +1,6 @@
-import { ArrowUp, ArrowUpRight, ArrowRight } from 'lucide-react'
+import { ArrowUp, ArrowUpRight, ArrowRight, Phone, MapPin, AtSign, MessageCircleQuestionMark } from 'lucide-react'
 import Reveal from './Reveal'
 import logoWhite from '../assets/logo-normvix-white.png'
-import iconContact from '../assets/icon-contact.png'
-import iconLocation from '../assets/icon-location.png'
-import iconNetwork from '../assets/icon-network.png'
-import iconFaq from '../assets/icon-faq.png'
 
 const links = [
   { href: '#problematica', label: 'Problemática' },
@@ -18,15 +14,15 @@ const links = [
 const platform = ['Marco legal', 'Aplicabilidad', 'Permisos críticos', 'Riesgos', 'Auditorías', 'Tableros y KPI']
 
 const contactInfo = [
-  { icon: iconContact, title: 'Llámanos', text: '+58 414-1759913', href: 'tel:+58 414-1759913' },
-  { icon: iconLocation, title: 'Ubicación', text: 'Caracas, Venezuela' },
+  { icon: Phone, title: 'Llámanos', text: '+58 414-1759913', href: 'tel:+58 414-1759913' },
+  { icon: MapPin, title: 'Ubicación', text: 'Caracas, Venezuela' },
   {
-    icon: iconNetwork,
+    icon: AtSign,
     title: 'Síguenos',
     text: '@normvix_ve',
     href: 'https://www.instagram.com/normvix_ve/',
   },
-  { icon: iconFaq, title: '¿Tienes dudas?', text: 'Preguntas frecuentes', href: '#faq' },
+  { icon: MessageCircleQuestionMark, title: '¿Tienes dudas?', text: 'Preguntas frecuentes', href: '#faq' },
 ]
 
 const socials = [
@@ -76,7 +72,7 @@ export default function Footer() {
       />
 
       <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {contactInfo.map(({ icon, title, text, href }, i) => {
+        {contactInfo.map(({ icon: Icon, title, text, href }, i) => {
           const Tag = href ? 'a' : 'div'
           const isExternal = href?.startsWith('http')
           return (
@@ -88,11 +84,9 @@ export default function Footer() {
                   href ? 'hover:-translate-y-1 hover:border-turquesa/40 hover:bg-white/7' : ''
                 }`}
               >
-                <img
-                  src={icon}
-                  alt=""
-                  className="w-12 h-12 rounded-full shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"
-                />
+                <span className="w-12 h-12 shrink-0 rounded-2xl bg-turquesa text-negro flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <Icon size={22} />
+                </span>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-white">{title}</p>
                   <p className="text-sm truncate">{text}</p>
