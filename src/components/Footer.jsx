@@ -11,21 +11,45 @@ const links = [
   { href: '#modulos', label: 'Módulos' },
   { href: '#como-funciona', label: 'Cómo funciona' },
   { href: '#beneficios', label: 'Beneficios' },
+  { href: '#planes', label: 'Planes' },
   { href: '#contacto', label: 'Contacto' },
 ]
 
 const platform = ['Marco legal', 'Aplicabilidad', 'Permisos críticos', 'Riesgos', 'Auditorías', 'Tableros y KPI']
 
 const contactInfo = [
-  { icon: iconContact, title: 'Llámanos', text: '+58 412-9564458', href: 'tel:+584129564458' },
+  { icon: iconContact, title: 'Llámanos', text: '+58 414-1759913', href: 'tel:+58 414-1759913' },
   { icon: iconLocation, title: 'Ubicación', text: 'Caracas, Venezuela' },
   {
     icon: iconNetwork,
     title: 'Síguenos',
-    text: '@normvix__vzla',
-    href: 'https://www.instagram.com/Normvix__vzla/',
+    text: '@normvix_ve',
+    href: 'https://www.instagram.com/normvix_ve/',
   },
   { icon: iconFaq, title: '¿Tienes dudas?', text: 'Preguntas frecuentes', href: '#faq' },
+]
+
+const socials = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/normvix',
+    icon: (
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/normvix_ve/',
+    icon: (
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" />
+        <circle cx="12" cy="12" r="4.25" />
+        <circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
 ]
 
 function FooterLink({ href, children }) {
@@ -51,7 +75,7 @@ export default function Footer() {
         aria-hidden="true"
       />
 
-      <div className="mx-auto max-w-7xl px-6 pt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {contactInfo.map(({ icon, title, text, href }, i) => {
           const Tag = href ? 'a' : 'div'
           const isExternal = href?.startsWith('http')
@@ -85,8 +109,8 @@ export default function Footer() {
         })}
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
-        <div>
+      <div className="mx-auto max-w-7xl px-6 md:px-10 py-16 grid gap-x-8 gap-y-12 grid-cols-2 lg:grid-cols-[2fr_1fr_1fr]">
+        <div className="col-span-2 lg:col-span-1">
           <img src={logoWhite} alt="Normvix" className="h-8 w-auto" />
           <p className="mt-6 font-heading font-bold text-base text-white">
             Tus obligaciones, <span className="text-gradient">bajo control.</span>
@@ -109,6 +133,20 @@ export default function Footer() {
             >
               contact@normvix.com
             </a>
+          </div>
+          <div className="mt-6 flex items-center gap-3">
+            {socials.map(({ label, href, icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Normvix en ${label}`}
+                className="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-white/70 transition-all duration-300 hover:bg-turquesa hover:border-turquesa hover:text-negro hover:-translate-y-0.5"
+              >
+                {icon}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -136,14 +174,14 @@ export default function Footer() {
       </div>
 
       <p
-        className="pointer-events-none select-none text-center font-heading font-bold leading-none tracking-tighter text-[18vw] lg:text-[15rem] mb-[-0.2em] bg-linear-to-b from-white/7 to-transparent bg-clip-text text-transparent"
+        className="pointer-events-none select-none text-center font-heading font-bold leading-none tracking-tighter text-[16vw] 2xl:text-[15rem] mb-[-0.2em] bg-linear-to-b from-white/7 to-transparent bg-clip-text text-transparent"
         aria-hidden="true"
       >
         NORMVIX
       </p>
 
       <div className="relative border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-6 py-6 flex flex-col-reverse sm:flex-row items-center justify-between gap-4 text-xs">
+        <div className="mx-auto max-w-7xl px-6 md:px-10 py-6 flex flex-col-reverse sm:flex-row items-center justify-between gap-4 text-xs">
           <p>© {new Date().getFullYear()} Normvix. Todos los derechos reservados.</p>
           <a
             href="#top"

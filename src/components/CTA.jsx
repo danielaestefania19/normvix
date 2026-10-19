@@ -34,8 +34,8 @@ export default function CTA() {
         variant="scale"
         className="relative isolate overflow-hidden mx-auto max-w-5xl rounded-4xl bg-linear-to-br from-negro via-negro to-azul px-6 py-16 md:px-16 md:py-20 text-center shadow-2xl shadow-black/25"
       >
-        <div className="absolute -z-10 -top-10 -bottom-10 left-[4%] w-20 bg-turquesa skew-x-34" aria-hidden="true" />
-        <div className="absolute -z-10 -top-10 -bottom-10 left-[14%] w-6 bg-ambar skew-x-34" aria-hidden="true" />
+        <div className="absolute -z-10 hidden lg:block -top-10 -bottom-10 left-[4%] w-20 bg-turquesa skew-x-34" aria-hidden="true" />
+        <div className="absolute -z-10 hidden lg:block -top-10 -bottom-10 left-[14%] w-6 bg-ambar skew-x-34" aria-hidden="true" />
         <div
           className="absolute -z-10 -bottom-24 -right-24 w-80 h-80 rounded-full bg-ambar/20 blur-3xl animate-blob"
           style={{ animationDelay: '-5s' }}

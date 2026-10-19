@@ -29,7 +29,7 @@ export default function Features() {
       <div className="absolute -top-20 -bottom-20 right-[12%] w-56 bg-turquesa/10 skew-x-34" aria-hidden="true" />
       <div className="absolute -top-20 -bottom-20 right-[2%] w-16 bg-turquesa/20 skew-x-34" aria-hidden="true" />
       <div className="absolute -top-40 right-0 w-lg h-128 rounded-full bg-turquesa/10 blur-3xl animate-blob" aria-hidden="true" />
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <Reveal className="max-w-2xl">
           <span className="eyebrow text-turquesa">
             Por qué Normvix

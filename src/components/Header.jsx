@@ -7,6 +7,7 @@ const links = [
   { href: '#modulos', label: 'Módulos' },
   { href: '#como-funciona', label: 'Cómo funciona' },
   { href: '#beneficios', label: 'Beneficios' },
+  { href: '#planes', label: 'Planes' },
   { href: '#contacto', label: 'Contacto' },
 ]
 
@@ -35,12 +36,12 @@ export default function Header() {
         style={{ transform: `scaleX(${progress})`, width: '100%' }}
         aria-hidden="true"
       />
-      <div className="mx-auto max-w-7xl px-6 h-18 py-3 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-6 md:px-10 h-18 py-3 flex items-center justify-between">
         <a href="#top">
           <img src={logoWhite} alt="Normvix" className="h-8 w-auto" />
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
             <a
               key={link.href}
@@ -54,14 +55,14 @@ export default function Header() {
 
         <a
           href="#contacto"
-          className="btn-shine hidden md:inline-flex items-center rounded-full bg-turquesa text-negro text-sm font-bold px-5 py-2.5 transition-all hover:bg-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-turquesa/30"
+          className="btn-shine hidden lg:inline-flex items-center rounded-full bg-turquesa text-negro text-sm font-bold px-5 py-2.5 transition-all hover:bg-white hover:-translate-y-0.5 hover:shadow-lg hover:shadow-turquesa/30"
         >
           Solicitar demo
         </a>
 
         <button
           type="button"
-          className="md:hidden text-white"
+          className="lg:hidden text-white"
           onClick={() => setOpen((o) => !o)}
           aria-label="Abrir menú"
         >
@@ -70,7 +71,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="animate-fade-up md:hidden border-t border-white/10 bg-negro px-6 py-4 flex flex-col gap-4">
+        <div className="animate-fade-up lg:hidden border-t border-white/10 bg-negro px-6 py-4 flex flex-col gap-4">
           {links.map((link) => (
             <a
               key={link.href}

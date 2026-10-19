@@ -22,7 +22,7 @@ const segments = [
 export default function Audience() {
   return (
     <section id="beneficios" className="py-20 md:py-28 bg-white">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
         <Reveal className="max-w-2xl">
           <span className="eyebrow">
             Beneficios
@@ -38,7 +38,7 @@ export default function Audience() {
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {segments.map(({ icon: Icon, title, text }, i) => (
-            <Reveal key={title} delay={i * 120}>
+            <Reveal key={title} delay={i * 120} className={i === 2 ? 'sm:col-span-2 lg:col-span-1' : ''}>
               <div className="group relative isolate h-full overflow-hidden rounded-3xl border border-black/5 bg-linear-to-b from-white to-marfil p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-turquesa/40 hover:shadow-xl hover:shadow-azul/10">
                 <span
                   className="absolute -z-10 -bottom-16 -right-16 w-40 h-40 rounded-full bg-ambar/15 blur-2xl transition-transform duration-700 group-hover:scale-150"

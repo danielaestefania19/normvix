@@ -27,7 +27,7 @@ const problems = [
 export default function Problems() {
   return (
     <section id="problematica" className="py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-6 md:px-10">
         <Reveal className="max-w-2xl">
           <span className="eyebrow">
             El reto regulatorio

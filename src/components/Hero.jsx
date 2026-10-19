@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="hero-stripe absolute -top-20 -bottom-20 left-[72%] w-10 bg-ambar skew-x-34" style={{ animationDelay: '300ms' }} />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <span className="animate-fade-up inline-flex items-center gap-2 rounded-full bg-white border border-black/10 shadow-sm text-turquesa-ink text-xs font-bold tracking-wide uppercase px-4 py-1.5">
             <span className="relative flex w-2 h-2">
@@ -37,7 +37,7 @@ export default function Hero() {
           </span>
 
           <h1
-            className="animate-fade-up mt-6 font-heading font-bold text-[2rem] sm:text-5xl lg:text-[2.75rem] xl:text-5xl leading-[1.12] text-negro"
+            className="animate-fade-up mt-6 font-heading font-bold text-[1.65rem] min-[400px]:text-[1.85rem] sm:text-5xl lg:text-[2.75rem] xl:text-5xl leading-[1.12] text-negro"
             style={{ animationDelay: '100ms' }}
           >
             Tus obligaciones,
@@ -56,12 +56,12 @@ export default function Hero() {
           </p>
 
           <div
-            className="animate-fade-up mt-10 flex flex-wrap gap-4"
+            className="animate-fade-up mt-10 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4"
             style={{ animationDelay: '300ms' }}
           >
             <a
               href="#contacto"
-              className="btn-shine group inline-flex items-center gap-2 rounded-full bg-negro text-white text-sm font-bold px-7 py-3.5 shadow-lg shadow-black/20 transition-all hover:bg-turquesa hover:text-negro hover:shadow-turquesa/40 hover:-translate-y-0.5"
+              className="btn-shine group inline-flex justify-center items-center gap-2 rounded-full bg-negro text-white text-sm font-bold px-7 py-3.5 shadow-lg shadow-black/20 transition-all hover:bg-turquesa hover:text-negro hover:shadow-turquesa/40 hover:-translate-y-0.5"
             >
               Solicitar demo gratuita
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -69,7 +69,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => setVideoOpen(true)}
-              className="group inline-flex items-center gap-2 rounded-full border border-negro/20 bg-white/80 backdrop-blur text-negro text-sm font-bold px-7 py-3.5 transition-all hover:border-negro hover:bg-negro hover:text-white hover:-translate-y-0.5"
+              className="group inline-flex justify-center items-center gap-2 rounded-full border border-negro/20 bg-white/80 backdrop-blur text-negro text-sm font-bold px-7 py-3.5 transition-all hover:border-negro hover:bg-negro hover:text-white hover:-translate-y-0.5"
             >
               <PlayCircle size={18} className="transition-transform group-hover:scale-110" />
               Ver cómo funciona
@@ -77,7 +77,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="animate-fade-up relative" style={{ animationDelay: '350ms' }}>
+        <div className="animate-fade-up relative w-full max-w-2xl mx-auto lg:max-w-none" style={{ animationDelay: '350ms' }}>
           <div className="absolute inset-10 bg-negro/25 rounded-4xl blur-3xl" aria-hidden="true" />
           <img
             src={heroImage}
@@ -86,7 +86,7 @@ export default function Hero() {
           />
 
           <div
-            className="absolute -left-4 top-8 sm:-left-8 animate-float hidden sm:flex items-center gap-3 rounded-2xl bg-white/90 backdrop-blur border border-black/5 shadow-xl shadow-azul/10 px-4 py-3"
+            className="absolute left-2 top-8 lg:-left-8 animate-float hidden sm:flex items-center gap-3 rounded-2xl bg-white/90 backdrop-blur border border-black/5 shadow-xl shadow-azul/10 px-4 py-3"
             aria-hidden="true"
           >
             <span className="w-9 h-9 rounded-xl bg-turquesa flex items-center justify-center">
@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
 
           <div
-            className="absolute -right-2 bottom-10 sm:-right-6 animate-float hidden sm:flex items-center gap-3 rounded-2xl bg-white/90 backdrop-blur border border-black/5 shadow-xl shadow-azul/10 px-4 py-3"
+            className="absolute right-2 bottom-10 lg:-right-6 animate-float hidden sm:flex items-center gap-3 rounded-2xl bg-white/90 backdrop-blur border border-black/5 shadow-xl shadow-azul/10 px-4 py-3"
             style={{ animationDelay: '-3s' }}
             aria-hidden="true"
           >
